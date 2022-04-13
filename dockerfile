@@ -26,6 +26,11 @@ RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 # Put Chromedriver into the PATH
 ENV PATH $CHROMEDRIVER_DIR:$PATH
 
+RUN apt-get install -y libglib2.0-0 \
+    libnss3 \
+    libgconf-2-4 \
+    libfontconfig1
+
 COPY . .
 RUN apt-get install -y openjdk-11-jre-headless
 ENV JDK_HOME /usr/lib/jvm/java-11-openjdk-amd64/

@@ -4,7 +4,7 @@ from telegram_integration import telegram_bot_sendtext
 import json
 
 
-with open('/Users/joseba/Documents/json_data.json') as json_file:
+with open('json_data.json') as json_file:
     data = json.load(json_file)
 
 token = data['keys']['telegram_token']
