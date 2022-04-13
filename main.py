@@ -1,5 +1,4 @@
 from curses.panel import bottom_panel
-from tkinter import BOTH
 from search_cita import get_cita
 from telegram_integration import telegram_bot_sendtext
 import json
