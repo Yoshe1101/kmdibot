@@ -8,7 +8,8 @@ def get_captcha():
     
     #im_crop = im.crop((900, 1025, 1200, 1125)) 
     #headless
-    im_crop = im.crop((750, 1025, 1000, 1125)) 
+    #im_crop = im.crop((750, 1025, 1000, 1125)) 
+    im_crop = im.crop((364, 502, 503, 532))
 
     im_crop.save('captcha.png', quality=95)
 
