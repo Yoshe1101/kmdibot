@@ -6,13 +6,16 @@ import time
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-def get_cita():
+
+def get_cita(id, cd):
+    id = str(id)
+    cd = str(cd)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-
+    url = "http://barcelona.kdmid.ru/queue/OrderInfo.aspx?id="+ id + "&cd=" + cd
     driver = webdriver.Chrome(options=chrome_options)
     #driver = webdriver.Chrome()
-    driver.get("http://barcelona.kdmid.ru/queue/OrderInfo.aspx?id=172878&cd=04352172")
+    driver.get(url)
 
     driver.save_screenshot("screenshot.png")
     time.sleep(5)
@@ -40,5 +43,5 @@ def get_cita():
         else:
             return True, 'ATTENTION!! Available Citas!!!'
     except:
-        return False, "Captcha has failed, again...."
+        return False, "Captcha has failed, treying again...."
 
