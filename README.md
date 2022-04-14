@@ -2,40 +2,40 @@
 bot to check embassy appointments
 
 
-#How to use it 
+# How to use it 
 
-##1- add your credentials to the json_data.json
+## 1- add your credentials to the json_data.json
 telegram_token = your telegram bot token
 telegram_chat_id = the id of your user chat or group
 web_id = request number?
 web_cd = code?
 
-##2- install the python libraries
+## 2- install the python libraries
 run: pip3 install -r requirements.txt
 
-##3- Run the python sript
+## 3- Run the python sript
 run: python3 main.py
 
 
 # How to use it (DOCKER)
 
-##1- add your credentials to the json_data.json
+## 1- add your credentials to the json_data.json
 telegram_token = your telegram bot token
 telegram_chat_id = the id of your user chat or group
 web_id = request number?
 web_cd = code?
-
-##2- build the docker image
+ 
+## 2- build the docker image
 
 go to the folder where the Dockerfile is and run:
 sudo docker build .
 
-##3-  Run the created docker image
+## 3-  Run the created docker image
 
 sudo docker run 'imageID' 
 
 
-#Notes
+# Notes
 
 So far this image only works with a telegram integration, feel free to use it stand alone with the command line
 
