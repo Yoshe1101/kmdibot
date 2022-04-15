@@ -53,7 +53,7 @@ def get_cita(id, cd):
         if texto in posted:
             return True, 'No citas availables'
         else:
-            return True, 'ATTENTION!! Available Citas!!!'
+            return True, 'ATTENTION!! Citas Available!!!'
     except:
-        return False, "Captcha has failed, treying again...."
+        return False, "Captcha identification has failed, trying again...."
 
